@@ -1,5 +1,4 @@
-# 415-Project-New-Idea
-# 415 Course Project Kickoff  (<-- change the name to the title of the whole application)
+# Libre
 
 ## Application nature and purpose
 
