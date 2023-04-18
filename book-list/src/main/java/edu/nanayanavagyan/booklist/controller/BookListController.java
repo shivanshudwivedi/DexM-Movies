@@ -1,7 +1,6 @@
 package edu.nanayanavagyan.booklist.controller;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,22 +31,14 @@ public class BookListController {
         );
 
 
-
+          //For each book, get its details and add all these books into a list
 
         return ratings.stream().map(rating -> {
             Book book = restTemplate.getForObject("http://localhost:8081/books/" + rating.getBookId(), Book.class);
             return new BookUnit(book.getName(), "This is a good book!", rating.getRating());
 
         })
-        .collect(Collectors.toList());
-         
-        //For each book, get its details
-
-
-        //Put all these books in a list
-
-
-        
+        .collect(Collectors.toList());    
         
     }
 }
