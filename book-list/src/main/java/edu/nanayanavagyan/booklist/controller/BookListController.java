@@ -15,7 +15,7 @@ public class BookListController {
     
     
     @RequestMapping("/{readerId}")
-    public List<Book> getBook(@PathVariable("readerId") String userId) {
+    public List<Book> getBooks(@PathVariable("readerId") String userId) {
 
         return Collections.singletonList(
             new Book("Anna Karenina", "Famous piece of Russian literature.", 4)
