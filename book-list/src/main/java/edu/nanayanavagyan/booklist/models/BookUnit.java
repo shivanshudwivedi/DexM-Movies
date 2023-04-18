@@ -1,16 +1,16 @@
 package edu.nanayanavagyan.booklist.models;
 
-public class Book {
+public class BookUnit {
     private String name;
     private String descript;
     private Integer rating;
 
     //Constructors
-    public Book(){
+    public BookUnit(){
 
     }
 
-    public Book(String name, String descript, Integer rating){
+    public BookUnit(String name, String descript, Integer rating){
         this.name = name;
         this.descript = descript;
         this.rating=rating;
