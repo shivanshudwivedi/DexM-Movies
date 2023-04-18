@@ -1,7 +1,7 @@
 package edu.nanayanavagyan.booklist.models;
 
 public class Rating {
-    private String bookId;
+    private Integer bookId;
     private Integer rating;
 
     //constructors
@@ -9,17 +9,17 @@ public class Rating {
 
     }
 
-    public Rating (String bookId, int rating){
+    public Rating (Integer bookId, int rating){
         this.bookId=bookId;
         this.rating=rating;
     }
 
     //getters and setters
-    public String getBookId(){
+    public Integer getBookId(){
         return bookId;
     }
 
-    public void setBookId(String bookId){
+    public void setBookId(Integer bookId){
         this.bookId=bookId;
     }
 

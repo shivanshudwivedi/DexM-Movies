@@ -16,15 +16,15 @@ public class BookRatingsController {
 
 
     @RequestMapping("/{bookId}")
-    public Rating getRating(@PathVariable("bookId") String bookId){
+    public Rating getRating(@PathVariable("bookId") Integer bookId){
         return new Rating(bookId, 4);
     }
 
     @RequestMapping("reader/{readerId}")
     public ReaderRating getReaderRating(@PathVariable("readerId") String readerId){
         List<Rating> readerRatings = Arrays.asList(
-            new Rating("1", 4),
-            new Rating("2", 5)
+            new Rating(1, 4),
+            new Rating(2, 5)
         );
          ReaderRating readerRating =new ReaderRating();
          readerRating.setReaderRating(readerRatings);

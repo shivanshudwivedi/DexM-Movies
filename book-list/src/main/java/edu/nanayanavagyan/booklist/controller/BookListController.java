@@ -23,7 +23,7 @@ public class BookListController {
 
     
     @RequestMapping("/{readerId}")
-    public List<BookUnit> getBooks(@PathVariable("readerId") String readerId) {
+    public List<BookUnit> getBooks(@PathVariable("readerId") Integer readerId) {
 
 
 
