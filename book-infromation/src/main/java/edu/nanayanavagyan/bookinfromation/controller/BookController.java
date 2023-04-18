@@ -11,7 +11,7 @@ import edu.nanayanavagyan.bookinfromation.models.Book;
 public class BookController {
 
     @RequestMapping("/{bookId}")
-    public Book getBookInfo(@PathVariable("bookId") String bookId) {
+    public Book getBookInfo(@PathVariable("bookId") Integer bookId) {
         return new Book(bookId, "Anna Karenina");
         
     } 

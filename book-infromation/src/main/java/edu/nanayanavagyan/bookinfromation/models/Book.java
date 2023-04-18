@@ -1,7 +1,7 @@
 package edu.nanayanavagyan.bookinfromation.models;
 
 public class Book {
-    private String bookId;
+    private Integer bookId;
     private String name;
 
     //constructors
@@ -9,18 +9,18 @@ public class Book {
         
     }
 
-    public Book(String bookId, String name){
+    public Book(Integer bookId, String name){
         this.bookId=bookId;
         this.name=name;
     }
 
     //getter and setter
-    public String getBookId(){
+    public Integer getBookId(){
         return bookId;
 
     }
 
-    public void setBookId(String bookId){
+    public void setBookId(Integer bookId){
         this.bookId = bookId;
     }
 
