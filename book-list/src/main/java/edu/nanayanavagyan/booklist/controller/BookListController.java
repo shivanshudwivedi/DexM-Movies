@@ -1,7 +1,5 @@
 package edu.nanayanavagyan.booklist.controller;
 
-import java.lang.reflect.ParameterizedType;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 
 import edu.nanayanavagyan.booklist.models.Book;
 import edu.nanayanavagyan.booklist.models.BookUnit;
-import edu.nanayanavagyan.booklist.models.Rating;
 import edu.nanayanavagyan.booklist.models.ReaderRating;
 
 @RestController
