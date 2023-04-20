@@ -3,6 +3,7 @@ package edu.nanayanavagyan.booklist.controller;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,13 +24,16 @@ public class BookListController {
 
     
     @RequestMapping("/{readerId}")
-    public List<BookUnit> getBooks(@PathVariable("readerId") Integer readerId) {
+    public List<BookUnit> getBooks(@PathVariable("readerId") Integer readerId)  {
 
 
 
         
         //get all rated book IDs
-        ReaderRating ratings = restTemplate.getForObject("http://localhost:8083/ratings/reader/" + readerId, ReaderRating.class);
+        String url = "http://localhost:8083/ratings/reader/";
+        System.setProperty("SERVICE_URL", url);
+        String serviceURL = System.getProperty("SERVICE_URL");
+        ReaderRating ratings = restTemplate.getForObject(serviceURL + readerId, ReaderRating.class);
 
 
           //For each book, get its details and add all these books into a list
