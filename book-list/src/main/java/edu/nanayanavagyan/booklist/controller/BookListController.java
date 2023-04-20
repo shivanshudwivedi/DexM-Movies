@@ -26,22 +26,22 @@ public class BookListController {
     @RequestMapping("/{readerId}")
     public List<BookUnit> getBooks(@PathVariable("readerId") Integer readerId)  {
 
-
-
         
         //get all rated book IDs
-        String url = "http://localhost:8083/ratings/reader/";
-        System.setProperty("SERVICE_URL", url);
-        String serviceURL = System.getProperty("SERVICE_URL");
-        ReaderRating ratings = restTemplate.getForObject(serviceURL + readerId, ReaderRating.class);
+        String url1 = "http://localhost:8083/ratings/reader/";
+        System.setProperty("SERVICE_URL1", url1);
+        String serviceURL1 = System.getProperty("SERVICE_URL1");
+        ReaderRating ratings = restTemplate.getForObject(serviceURL1 + readerId, ReaderRating.class);
 
-
-          //For each book, get its details and add all these books into a list
-
+        //For each book, get its details and add all these books into a list
         return ratings.getReaderRating().stream().map(rating -> {
 
             //For each book Id, get its details from the book information service
-            Book book = restTemplate.getForObject("http://localhost:8081/books/" + rating.getBookId(), Book.class);
+            String url2 = "http://localhost:8081/books/";
+            System.setProperty("SERVICE_URL2", url2);
+            String  serviceURL2 = System.getProperty("SERVICE_URL2");
+            Book book = restTemplate.getForObject(serviceURL2 + rating.getBookId(), Book.class);
+
             //Put all the books together
             return new BookUnit(book.getName(), "This is a good book!", rating.getRating());
 
