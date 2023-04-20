@@ -29,12 +29,19 @@ public class BookListController {
         
         //get all rated book IDs
         //String apiKey1 = System.getenv("API_KEY_1");
-        String url1 = "http://localhost:8083/ratings/reader/_VAR1_";
+        //String url1 = "http://localhost:8083/ratings/reader/_VAR1_"; //VAR should be replaced by readerId
         Integer myVar1 = readerId;
-        url1 = url1.replace("_VAR_", Integer.toString(myVar1));
+        String host1 = System.getProperty("HOST1","localhost");
+        String port1 = System.getProperty("PORT1","8083");
+        String lv1 = System.getProperty("LV1","ratings/reader/");
+        String url1 = "http://" +host1 + ":" + port1 + "/" + lv1 + "/";
+
+        /**url1 = url1.replace("_VAR_", Integer.toString(myVar1));
         System.setProperty("SERVICE_URL1", url1);
         String serviceURL1 = System.getProperty("SERVICE_URL1");
-        ReaderRating ratings = restTemplate.getForObject(serviceURL1 + readerId, ReaderRating.class);
+        */
+
+        ReaderRating ratings = restTemplate.getForObject(url1 + readerId, ReaderRating.class);
         //System.out.println(apiKey1);
 
         //For each book, get its details and add all these books into a list
