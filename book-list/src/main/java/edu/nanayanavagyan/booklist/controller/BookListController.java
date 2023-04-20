@@ -28,19 +28,28 @@ public class BookListController {
 
         
         //get all rated book IDs
-        String url1 = "http://localhost:8083/ratings/reader/";
+        //String apiKey1 = System.getenv("API_KEY_1");
+        String url1 = "http://localhost:8083/ratings/reader/_VAR1_";
+        Integer myVar1 = readerId;
+        url1 = url1.replace("_VAR_", Integer.toString(myVar1));
         System.setProperty("SERVICE_URL1", url1);
         String serviceURL1 = System.getProperty("SERVICE_URL1");
         ReaderRating ratings = restTemplate.getForObject(serviceURL1 + readerId, ReaderRating.class);
+        //System.out.println(apiKey1);
 
         //For each book, get its details and add all these books into a list
         return ratings.getReaderRating().stream().map(rating -> {
 
             //For each book Id, get its details from the book information service
+            //String apiKey2 = System.getenv("API_KEY_2");
             String url2 = "http://localhost:8081/books/";
+            Integer varBookId = rating.getBookId();
+            Integer myVar2 = varBookId;
+            url2 = url2.replace("_VAR_", Integer.toString(myVar2));
             System.setProperty("SERVICE_URL2", url2);
             String  serviceURL2 = System.getProperty("SERVICE_URL2");
             Book book = restTemplate.getForObject(serviceURL2 + rating.getBookId(), Book.class);
+            
 
             //Put all the books together
             return new BookUnit(book.getName(), "This is a good book!", rating.getRating());
