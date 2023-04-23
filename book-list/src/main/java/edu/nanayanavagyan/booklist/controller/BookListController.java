@@ -49,13 +49,20 @@ public class BookListController {
 
             //For each book Id, get its details from the book information service
             //String apiKey2 = System.getenv("API_KEY_2");
-            String url2 = "http://localhost:8081/books/";
+            //String url2 = "http://localhost:8081/books/";
             Integer varBookId = rating.getBookId();
-            Integer myVar2 = varBookId;
-            url2 = url2.replace("_VAR_", Integer.toString(myVar2));
-            System.setProperty("SERVICE_URL2", url2);
-            String  serviceURL2 = System.getProperty("SERVICE_URL2");
-            Book book = restTemplate.getForObject(serviceURL2 + rating.getBookId(), Book.class);
+            //Integer myVar2 = varBookId;
+            //url2 = url2.replace("_VAR_", Integer.toString(myVar2));
+            //System.setProperty("SERVICE_URL2", url2);
+            //String  serviceURL2 = System.getProperty("SERVICE_URL2");
+
+            String host2 = System.getProperty("HOST2","localhost");
+            String port2 = System.getProperty("PORT2","8081");
+            String lv2 = System.getProperty("LV2","books/");
+            String url2 = "http://" +host2 + ":" + port2 + "/" + lv2 + "/";
+
+            Book book = restTemplate.getForObject(url2 + rating.getBookId(), Book.class);
+
             
 
             //Put all the books together

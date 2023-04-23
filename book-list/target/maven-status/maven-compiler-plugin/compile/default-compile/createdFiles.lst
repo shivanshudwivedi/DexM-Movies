@@ -1,0 +1,6 @@
+edu/nanayanavagyan/booklist/models/ReaderRating.class
+edu/nanayanavagyan/booklist/models/BookUnit.class
+edu/nanayanavagyan/booklist/models/Book.class
+edu/nanayanavagyan/booklist/models/Rating.class
+edu/nanayanavagyan/booklist/controller/BookListController.class
+edu/nanayanavagyan/booklist/BookListApplication.class
