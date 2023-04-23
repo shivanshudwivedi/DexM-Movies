@@ -30,7 +30,7 @@ public class BookListController {
         //get all rated book IDs
         //String apiKey1 = System.getenv("API_KEY_1");
         //String url1 = "http://localhost:8083/ratings/reader/_VAR1_"; //VAR should be replaced by readerId
-        Integer myVar1 = readerId;
+        //Integer myVar1 = readerId;
         String host1 = System.getProperty("HOST1","localhost");
         String port1 = System.getProperty("PORT1","8083");
         String lv1 = System.getProperty("LV1","ratings/reader/");
@@ -50,7 +50,7 @@ public class BookListController {
             //For each book Id, get its details from the book information service
             //String apiKey2 = System.getenv("API_KEY_2");
             //String url2 = "http://localhost:8081/books/";
-            Integer varBookId = rating.getBookId();
+            //Integer varBookId = rating.getBookId();
             //Integer myVar2 = varBookId;
             //url2 = url2.replace("_VAR_", Integer.toString(myVar2));
             //System.setProperty("SERVICE_URL2", url2);
