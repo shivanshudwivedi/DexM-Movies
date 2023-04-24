@@ -27,41 +27,25 @@ public class BookListController {
     public List<BookUnit> getBooks(@PathVariable("readerId") Integer readerId)  {
 
         
-        //get all rated book IDs
-        //String apiKey1 = System.getenv("API_KEY_1");
-        //String url1 = "http://localhost:8083/ratings/reader/_VAR1_"; //VAR should be replaced by readerId
-        //Integer myVar1 = readerId;
-        String host1 = System.getProperty("HOST1","localhost"); //it is the host related to microservice host_ratings
-        String port1 = System.getProperty("PORT1","8083");
-        String lv1 = System.getProperty("LV1","ratings/reader/");
-        String url1 = "http://" +host1 + ":" + port1 + "/" + lv1 + "/";
+        String host_rating = System.getProperty("HOST1","localhost"); //it is the host related to microservice host_ratings
+        String port_rating = System.getProperty("PORT1","8083");
+        String lv_rating = System.getProperty("LV1","ratings/reader/");
+        String url_rating = "http://" + host_rating + ":" + port_rating + "/" + lv_rating + "/";
 
-        /**url1 = url1.replace("_VAR_", Integer.toString(myVar1));
-        System.setProperty("SERVICE_URL1", url1);
-        String serviceURL1 = System.getProperty("SERVICE_URL1");
-        */
+    
 
-        ReaderRating ratings = restTemplate.getForObject(url1 + readerId, ReaderRating.class);
+        ReaderRating ratings = restTemplate.getForObject(url_rating + readerId, ReaderRating.class);
         //System.out.println(apiKey1);
 
         //For each book, get its details and add all these books into a list
         return ratings.getReaderRating().stream().map(rating -> {
 
-            //For each book Id, get its details from the book information service
-            //String apiKey2 = System.getenv("API_KEY_2");
-            //String url2 = "http://localhost:8081/books/";
-            //Integer varBookId = rating.getBookId();
-            //Integer myVar2 = varBookId;
-            //url2 = url2.replace("_VAR_", Integer.toString(myVar2));
-            //System.setProperty("SERVICE_URL2", url2);
-            //String  serviceURL2 = System.getProperty("SERVICE_URL2");
+            String host_info = System.getProperty("HOST2","localhost");
+            String port_info = System.getProperty("PORT2","8081");
+            String lv_info = System.getProperty("LV2","books/");
+            String url_info = "http://" +host_info + ":" + port_info + "/" + lv_info + "/";
 
-            String host2 = System.getProperty("HOST2","localhost");
-            String port2 = System.getProperty("PORT2","8081");
-            String lv2 = System.getProperty("LV2","books/");
-            String url2 = "http://" +host2 + ":" + port2 + "/" + lv2 + "/";
-
-            Book book = restTemplate.getForObject(url2 + rating.getBookId(), Book.class);
+            Book book = restTemplate.getForObject(url_info + rating.getBookId(), Book.class);
 
             
 
