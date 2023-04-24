@@ -11,6 +11,7 @@ import edu.nanayanavagyan.bookinfromation.models.Book;
 public class BookController {
 
     @RequestMapping("/{bookId}")
+    //Change request to get
     public Book getBookInfo(@PathVariable("bookId") Integer bookId) {
         return new Book(bookId, "Anna Karenina");
         

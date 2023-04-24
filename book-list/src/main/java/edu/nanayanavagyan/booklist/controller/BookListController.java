@@ -31,7 +31,7 @@ public class BookListController {
         //String apiKey1 = System.getenv("API_KEY_1");
         //String url1 = "http://localhost:8083/ratings/reader/_VAR1_"; //VAR should be replaced by readerId
         //Integer myVar1 = readerId;
-        String host1 = System.getProperty("HOST1","localhost");
+        String host1 = System.getProperty("HOST1","localhost"); //it is the host related to microservice host_ratings
         String port1 = System.getProperty("PORT1","8083");
         String lv1 = System.getProperty("LV1","ratings/reader/");
         String url1 = "http://" +host1 + ":" + port1 + "/" + lv1 + "/";
