@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rating-deployment
+  labels:
+    app.kubernetes.io/name: rating
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: rating
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: rating
+    spec:
+      containers:
+      - name: rating
+        image: armennanayan/book-rating:1.0.0
+        ports:
+        - containerPort: 8083
+          name: rest-port
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rating-service
+spec:
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: rating
+  ports:
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: 8083
+      targetPort: rest-port
+      nodePort: 30103  #This is what we need to poke in goodle cloud
