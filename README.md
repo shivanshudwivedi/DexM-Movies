@@ -2,28 +2,33 @@
 
 ## Application nature and purpose
 
-Our webiste will suggest a variety of service to its users, who will be people fond of reading books. 
-1. It will allow its users to search a book and find infromation about it, including its name, author, genre, when it was written, description. 
+Our webiste will suggest a variety of services to its users, who will be people fond of reading books. 
+1. It will allow its users to search a book and find infromation about it, including its name, author, genre, description and the year it was written. 
 2. It will allow to search the books read by a specific user. 
 3. It will allow to see the ratings of all books given by a specific user. 
 
-## Team members
+## Contributors
 
-Anahit Avagyan & Armen Nanayan 
+1. Anahit Avagyan 
+2. Armen Nanayan 
 
 ## The estimated modules
 
-- Module 1 - Searching for a book
-- Module 2 - Searching for the list of books read by a specific reader (user)
-- Module 3 - Seeing the ratings of the books given by a specific user. 
+Module 1 (book-info)    -  Given the book id, provides information about that book. 
+Module 2 (book-rating)  -  a) Given a book id, provides the book along with its rating, 
+                           b) Given a user id, provides the books and their ratings given by that user. 
+Module 3 (book-list)    -  Given user id, provides the list of the books read by that user along with the information about those books and                            the ratings that the user provided for each of them.  
 
-## Estimated languages and frameworks Languages
+## Languages and Frameworks 
 
-- Java
-- Frameworks - SpringBoot
+1. Java
+2. SpringBoot
+3. Kubernetes
+4. Docker
 
 ## General description of the UI with the primary actions
-
-- The user will be able to search for a specific book and get informatio about it
-- The user will be able to search a specific user to see the list of books they have read
-- The user will be able to search for rating of the books read by a sepcific user 
+The user will be able to 
+1. Get information about a specific book 
+2. See the rating of a specific book 
+3. See the list of books and the ratings for each of them provided by a specific user 
+5. See the books that a user read along with the information about those books and the ratings that the user provided for each of them 
