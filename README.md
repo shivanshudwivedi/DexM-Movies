@@ -34,4 +34,4 @@ The user will be able to
 5. See the books that a user read along with the information about those books and the ratings that the user provided for each of them
 
 ## Libre Architecture 
-![The Architecture of the Libre app.]()
+![The Architecture of the Libre app.](https://github.com/anahitavagyan/415-Project-New-Idea/blob/main/Libre%20Architecture.png)
