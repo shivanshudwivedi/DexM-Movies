@@ -14,10 +14,10 @@ Our webiste will suggest a variety of services to its users, who will be people 
 
 ## The estimated modules
 
-Module 1 (book-info)    -  Given the book id, provides information about that book. 
-Module 2 (book-rating)  -  a) Given a book id, provides the book along with its rating, 
-                           b) Given a user id, provides the books and their ratings given by that user. 
-Module 3 (book-list)    -  Given user id, provides the list of the books read by that user along with the information about those books and                            the ratings that the user provided for each of them.  
+- Module 1   -  Given the book id, provides information about that book. 
+- Module 2   -  a) Given a book id, provides the book along with its rating, 
+                b) Given a user id, provides the books and their ratings given by that user. 
+- Module 3   -  Given user id, provides the list of the books read by that user along with the information about those books and                             the ratings that the user provided for each of them.  
 
 ## Languages and Frameworks 
 
