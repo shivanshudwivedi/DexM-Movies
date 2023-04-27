@@ -19,7 +19,7 @@ spec:
         image: armennanayan/book-rating:1.0.0
         ports:
         - containerPort: 8083
-          name: rest-port
+          name: rest-port      
 ---
 apiVersion: v1
 kind: Service
