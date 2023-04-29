@@ -34,6 +34,9 @@ The user will be able to
 5. See the books that a user read along with the information about those books and the ratings that the user provided for each of them
 
 ## Running the app in Kubernetes 
+To run the app in Kubernetes, Docker for Desktop is required.  
+The folder K8s contains all the necessary YAML files.  
+Follow the commands below: 
 1. To create all the necessary deployments, services and the configmap, run the following command:
 kubectl apply -f K8s
 
