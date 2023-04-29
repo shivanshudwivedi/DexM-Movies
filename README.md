@@ -36,7 +36,10 @@ The user will be able to
 ## Running the app in Kubernetes 
 To run the app in Kubernetes, Docker for Desktop is required.  
 The folder K8s contains all the necessary YAML files. To create all the necessary deployments, services and the configmap, run the following command:  
+```sh
 kubectl apply -f K8s
+```
+
 
 ## Libre Architecture 
 ![The Architecture of the Libre app.](https://github.com/anahitavagyan/415-Project-New-Idea/blob/main/Libre%20Architecture.png)
