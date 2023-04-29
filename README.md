@@ -39,7 +39,9 @@ The folder K8s contains all the necessary YAML files. To create all the necessar
 ```sh
 kubectl apply -f K8s
 ```
-To see the information about the book with the ID 1, go to - http://localhost:30102/books/1
+- To see the information about the book with the ID 1, go to http://localhost:30102/books/1
+- To see the rating of the book with the ID 1, go to http://localhost:30103/ratings/1
+- To see the list of the books of the user with ID 1 along with the information about those books and the rating of them given by that user go to http://localhost:30104/bookList/1
 
 
 ## Libre Architecture 
