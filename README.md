@@ -33,5 +33,9 @@ The user will be able to
 3. See the list of books and the ratings for each of them provided by a specific user 
 5. See the books that a user read along with the information about those books and the ratings that the user provided for each of them
 
+## Running the app in Kubernetes 
+1. To create all the necessary deployments, services and the configmap, run the following command:
+kubectl apply -f K8s
+
 ## Libre Architecture 
 ![The Architecture of the Libre app.](https://github.com/anahitavagyan/415-Project-New-Idea/blob/main/Libre%20Architecture.png)
