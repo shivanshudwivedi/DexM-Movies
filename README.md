@@ -37,7 +37,7 @@ The user will be able to
 To run the app in Kubernetes, Docker for Desktop is required.  
 The folder K8s contains all the necessary YAML files.  
 Follow the commands below: 
-1. To create all the necessary deployments, services and the configmap, run the following command:
+1. To create all the necessary deployments, services and the configmap, run the following command:  
 kubectl apply -f K8s
 
 ## Libre Architecture 
