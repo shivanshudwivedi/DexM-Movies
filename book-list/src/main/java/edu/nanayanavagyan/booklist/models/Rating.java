@@ -3,14 +3,16 @@ package edu.nanayanavagyan.booklist.models;
 public class Rating {
     private Integer bookId;
     private Integer rating;
+    private String name;
 
     //constructors
     public Rating(){
 
     }
 
-    public Rating (Integer bookId, int rating){
+    public Rating (Integer bookId, String name, int rating){
         this.bookId=bookId;
+        this.name = name;
         this.rating=rating;
     }
 
@@ -29,6 +31,14 @@ public class Rating {
 
     public void setRating(Integer rating){
         this.rating=rating;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name=name;
     }
 
 
