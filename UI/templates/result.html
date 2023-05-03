@@ -9,10 +9,13 @@
 	<div class="card">
 	  <div class="container">
 	    <h3><b>Information card</b></h3>
-	    <p>The information: {{ result }}</p>
-		<p>The name of book: {{result['name']}}</p>
-		<p>The description: {{ result['descript']}}</p>
-		<p>The rating of book: {{ result['rating']}}</p>
+		<p>_______________________________________________</p>
+	    {% for book_list in result %}
+		<p>The name of book: {{book_list['name']}}</p>
+		<p>The description: {{ book_list['descript']}}</p>
+		<p>The rating of book: {{ book_list['rating']}}</p>
+		<p>_______________________________________________</p>
+		{% endfor %}
 	  </div>
 	</div>
 </body>
