@@ -49,7 +49,7 @@ public class BookListController {
             
 
             //Put all the books together
-            return new BookUnit(book.getName(), "This is a good book!", rating.getRating());
+            return new BookUnit(book.getName(), book.getAuthor(), book.getGenre(), book.getDate(), rating.getRating());
 
         })
         .collect(Collectors.toList());    

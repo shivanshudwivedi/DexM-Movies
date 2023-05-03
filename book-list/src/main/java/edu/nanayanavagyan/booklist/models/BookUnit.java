@@ -2,7 +2,9 @@ package edu.nanayanavagyan.booklist.models;
 
 public class BookUnit {
     private String name;
-    private String descript;
+    private String author;
+    private String genre;
+    private Integer date;
     private Integer rating;
 
     //Constructors
@@ -10,9 +12,11 @@ public class BookUnit {
 
     }
 
-    public BookUnit(String name, String descript, Integer rating){
+    public BookUnit(String name, String author, String genre, Integer date, Integer rating){
         this.name = name;
-        this.descript = descript;
+        this.author = author;
+        this.genre = genre;
+        this.date=date;
         this.rating=rating;
     }
 
@@ -27,13 +31,31 @@ public class BookUnit {
         this.name = name;
     }
 
-    public String getDescript(){
-        return descript;
+    public String getAuhtor(){
+        return author;
 
     }
 
-    public void settDescript(String descript){
-        this.descript = descript;
+    public void setAuhtor(String author){
+        this.author = author;
+    }
+
+    public String getGenre(){
+        return genre;
+
+    }
+
+    public void setGenre(String genre){
+        this.genre = genre;
+    }
+
+    public Integer getDate(){
+        return date;
+
+    }
+
+    public void setDate(Integer date){
+        this.date = date;
     }
 
     public Integer getRating(){

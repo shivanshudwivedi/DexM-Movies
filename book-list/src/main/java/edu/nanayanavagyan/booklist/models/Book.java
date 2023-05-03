@@ -44,7 +44,7 @@ public class Book {
 
     }
 
-    public void setAuhtor(String author){
+    public void setAuthor(String author){
         this.author = author;
     }
 
