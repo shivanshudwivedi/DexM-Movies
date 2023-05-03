@@ -14,17 +14,16 @@ import edu.nanayanavagyan.bookratings.models.ReaderRating;
 @RequestMapping("/ratings")
 public class BookRatingsController {
 
-
     @RequestMapping("/{bookId}")
     public Rating getRating(@PathVariable("bookId") Integer bookId){
-        return new Rating(bookId, 4);
+        return new Rating(bookId,"Anna Karenina", 4);
     }
 
     @RequestMapping("reader/{readerId}")
     public ReaderRating getReaderRating(@PathVariable("readerId") String readerId){
         List<Rating> readerRatings = Arrays.asList(
-            new Rating(1, 4),
-            new Rating(2, 5)
+            new Rating(1, "Anna Karenina", 4),
+            new Rating(2, "Normal People", 5)
         );
          ReaderRating readerRating =new ReaderRating();
          readerRating.setReaderRating(readerRatings);
