@@ -5,11 +5,14 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/res_style.css') }}">
 </head>
 <body>
-	<h1 = class="name">User's information</h1>
+	<h1 = class="name">Book List information</h1>
 	<div class="card">
 	  <div class="container">
 	    <h3><b>Information card</b></h3>
 	    <p>The information: {{ result }}</p>
+		<p>The name of book: {{result['name']}}</p>
+		<p>The description: {{ result['descript']}}</p>
+		<p>The rating of book: {{ result['rating']}}</p>
 	  </div>
 	</div>
 </body>
