@@ -11,9 +11,10 @@
 	    <h3><b>Information card</b></h3>
 		<p>_______________________________________________</p>
 	    {% for book_list in result %}
-		<p>The name of book: {{book_list['name']}}</p>
-		<p>The description: {{ book_list['descript']}}</p>
-		<p>The rating of book: {{ book_list['rating']}}</p>
+		<p>The name of book: {{ book_list['name']}}</p>
+		<p>The date of publishment: {{ book_list['date']}}</p>
+		<p>The genre: {{ book_list['genre']}}</p>
+		<p>The author: {{ book_list['author']}}</p>
 		<p>_______________________________________________</p>
 		{% endfor %}
 	  </div>

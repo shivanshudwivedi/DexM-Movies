@@ -31,12 +31,12 @@ public class BookUnit {
         this.name = name;
     }
 
-    public String getAuhtor(){
+    public String getAuthor(){
         return author;
 
     }
 
-    public void setAuhtor(String author){
+    public void setAuthor(String author){
         this.author = author;
     }
 
