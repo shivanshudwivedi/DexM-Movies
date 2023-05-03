@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Libre</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/rating_style.css') }}">
+</head>
+<body>
+	<div class="navbar">
+  	<a href="index.html" class="active">Home</a>
+  	<a href="info.html">Information</a>
+  	<a href="rating.html">Ratings</a>
+	</div>
+	<h1 class="name">Libre</h1>
+	<div class="search-container">
+		<form action="/rating_result" method="POST">
+			<label type="name_search" for="book_rating_id">Book ID for rating:</label>
+			<input type="text" name="book_rating_id" id="book_rating_id" placeholder="Search..">
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>
