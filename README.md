@@ -53,24 +53,35 @@ kubectl get all
 4. Once they all are ready, go to http://localhost:30105
 
 ## Running the app on GKE
-1. Assuming that the repository is public(which is not the case, it is private now), to clone it to your GKE Cluster, use the following command:
+1. Assuming that the repository is public (which is not the case, it is private now), to clone it to your GKE Cluster, use the following command:
 ```sh
 git clone https://github.com/anahitavagyan/415-Project-New-Idea.git
 ```
-2. Chnage the directory to the project by running:
+2. If you cloned the repository previously, to make sure you are running the latest version of it, run the following command:
+```sh
+git pull
+```
+3. Chnage the directory to the project by running:
 ```sh
 cd 415-Project-New-Idea
 ```
-3. The folder K8s contains all the necessary YAML files. To create all the necessary deployments, services and the configmap, run the following command:  
+4. The folder K8s contains all the necessary YAML files. To create all the necessary deployments, services and the configmap, run the following command:  
 ```sh
 kubectl apply -f K8s
 ```
-4. To check if all the components are up and running, use the following command:
+5. To check if all the components are up and running, use the following command:
 ```sh
 kubectl get all
 ```
-5. 
-
+6. We must tell the GKE cloud firewall that traffic through the NodePort number should be allowed. To open a port through the firewall, use the following command:
+```sh
+gcloud compute firewall-rules create my-rule1 --allow tcp:30105
+```
+7. To find the External IP address of one of your nodes, run the following command:
+```sh
+kubectl get nodes -o wide
+```
+8. To see the application, open your browser and type http://EXTERNAL IP:30105 replacing the EXTERNAL IP with one of the node External IPs found in the previous step.  
 
 ## Libre Architecture 
 ![The Architecture of the Libre app.](https://github.com/anahitavagyan/415-Project-New-Idea/blob/main/Libre%20Architecture.png)
