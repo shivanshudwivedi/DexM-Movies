@@ -17,7 +17,7 @@ def list():
 def result():
     book_id = request.form['book_id']
     print(f'Book ID: {book_id}')
-    url = f'http://localhost:8082/bookList/{book_id}'
+    url = f'http://list-service:8082/bookList/{book_id}'
     response = requests.get(url)
     result = response.json()
     return render_template('result.html', result=result)
@@ -32,7 +32,7 @@ def info():
 def info_result():
     book_info_id = request.form['book_info_id']
     print(f'Book ID: {book_info_id}')
-    url_info = f'http://localhost:8081/books/{book_info_id}'
+    url_info = f'http://info-service:8081/books/{book_info_id}'
     response_info = requests.get(url_info)
     result_info = response_info.json()
     return render_template('info_result.html', result_info=result_info)
@@ -48,7 +48,7 @@ def rating():
 def rating_result():
     book_rating_id = request.form['book_rating_id']
     print(f'Book ID: {book_rating_id}')
-    url_rating = f'http://localhost:8083/ratings/{book_rating_id}'
+    url_rating = f'http://rating-service:8083/ratings/{book_rating_id}'
     response_rating = requests.get(url_rating)
     result_rating = response_rating.json()
     return render_template('rating_result.html', result_rating=result_rating)
