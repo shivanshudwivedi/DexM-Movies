@@ -81,7 +81,7 @@ gcloud compute firewall-rules create my-rule1 --allow tcp:30105
 ```sh
 kubectl get nodes -o wide
 ```
-8. To see the application, open your browser and type http://EXTERNAL IP:30105 replacing the EXTERNAL IP with one of the node External IPs found in the previous step.  
+8. To see the application, open your browser and type http://EXTERNAL_IP:30105 replacing the EXTERNAL_IP with one of the node External IPs found in the previous step.  
 
 ## Libre Architecture 
 ![The Architecture of the Libre app.](https://github.com/anahitavagyan/415-Project-New-Idea/blob/main/Libre%20Architecture.png)
