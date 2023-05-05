@@ -46,7 +46,7 @@ To check if all the components are up and running, use the following command:
 ```sh
 kubectl get all
 ```
-Once they all are ready, go to http://localhost:30105/
+Once they all are ready, go to http://localhost:30105
 
 ## Libre Architecture 
 ![The Architecture of the Libre app.](https://github.com/anahitavagyan/415-Project-New-Idea/blob/main/Libre%20Architecture.png)
