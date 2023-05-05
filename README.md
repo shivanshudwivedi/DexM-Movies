@@ -38,37 +38,38 @@ The user will be able to
 
 ## Running the app in Kubernetes 
 To run the app in Kubernetes, you should have Docker for Desktop installed.  
-To clone the project to your local machine, use the following command:
+1. To clone the project to your local machine, use the following command:
 ```sh
 git clone https://github.com/anahitavagyan/415-Project-New-Idea.git
 ```
-The folder K8s contains all the necessary YAML files. To create all the necessary deployments, services and the configmap, run the following command:  
+2. The folder K8s contains all the necessary YAML files. To create all the necessary deployments, services and the configmap, run the following command:  
 ```sh
 kubectl apply -f K8s
 ```
-To check if all the components are up and running, use the following command:
+3. To check if all the components are up and running, use the following command:
 ```sh
 kubectl get all
 ```
-Once they all are ready, go to http://localhost:30105
+4. Once they all are ready, go to http://localhost:30105
 
 ## Running the app on GKE
-Assuming that the repository is public(which is not the case, it is private now), to clone it to your GKE Cluster, use the following command:
+1. Assuming that the repository is public(which is not the case, it is private now), to clone it to your GKE Cluster, use the following command:
 ```sh
 git clone https://github.com/anahitavagyan/415-Project-New-Idea.git
 ```
-Chnage the directory to the project by running:
+2. Chnage the directory to the project by running:
 ```sh
 cd 415-Project-New-Idea
 ```
-The folder K8s contains all the necessary YAML files. To create all the necessary deployments, services and the configmap, run the following command:  
+3. The folder K8s contains all the necessary YAML files. To create all the necessary deployments, services and the configmap, run the following command:  
 ```sh
 kubectl apply -f K8s
 ```
-To check if all the components are up and running, use the following command:
+4. To check if all the components are up and running, use the following command:
 ```sh
 kubectl get all
 ```
+5. 
 
 
 ## Libre Architecture 
