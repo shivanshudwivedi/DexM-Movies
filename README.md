@@ -38,6 +38,10 @@ The user will be able to
 
 ## Running the app in Kubernetes 
 To run the app in Kubernetes, you should have Docker for Desktop installed.  
+To clone the project to your local machine, use the following command:
+```sh
+git clone https://github.com/anahitavagyan/415-Project-New-Idea.git
+```
 The folder K8s contains all the necessary YAML files. To create all the necessary deployments, services and the configmap, run the following command:  
 ```sh
 kubectl apply -f K8s
