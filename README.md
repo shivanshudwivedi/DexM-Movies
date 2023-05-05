@@ -73,7 +73,7 @@ kubectl apply -f K8s
 ```sh
 kubectl get all
 ```
-6. We must tell the GKE cloud firewall that traffic through the NodePort number should be allowed. To open a port through the firewall, use the following command:
+6. Once they are ready, we must tell the GKE cloud firewall that traffic through the NodePort number should be allowed. To open a port through the firewall, use the following command:
 ```sh
 gcloud compute firewall-rules create my-rule1 --allow tcp:30105
 ```
@@ -81,7 +81,7 @@ gcloud compute firewall-rules create my-rule1 --allow tcp:30105
 ```sh
 kubectl get nodes -o wide
 ```
-8. To see the application, open your browser and type http://EXTERNAL_IP:30105 replacing the EXTERNAL_IP with one of the node External IPs found in the previous step.  
+8. To run the application, in your browser open a new tab and in its adress bar type http://EXTERNAL_IP:30105 replacing the EXTERNAL_IP with one of the node External IPs found in the previous step.  
 
 ## Libre Architecture 
 ![The Architecture of the Libre app.](https://github.com/anahitavagyan/415-Project-New-Idea/blob/main/Libre%20Architecture.png)
