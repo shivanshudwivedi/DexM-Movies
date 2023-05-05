@@ -2,7 +2,7 @@
 
 ## Application nature and purpose
 
-Our webiste will suggest a variety of services to its users, who will be people fond of reading books. 
+Our webiste will suggest a variety of services to its users, who will be the people fond of reading books. 
 1. It will allow its users to search a book and find infromation about it, including its name, author, genre, and the year it was written. 
 2. It will allow to search the books read by a specific user. 
 3. It will allow to see the ratings of all books given by a specific user. 
