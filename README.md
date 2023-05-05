@@ -24,7 +24,7 @@ Our webiste will suggest a variety of services to its users, who will be people 
 1. Java
 2. SpringBoot
 3. Python
-4. HTML.CSS
+4. HTML/CSS
 5. Flask
 3. Kubernetes
 4. Docker
