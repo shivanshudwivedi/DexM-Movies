@@ -87,4 +87,4 @@ kubectl get nodes -o wide
 ![The Architecture of the Libre app.](https://github.com/anahitavagyan/415-Project-New-Idea/blob/main/Libre%20Architecture.png)
 
 ## Notes
-The "replicas" in all the yaml files are set 1. The reason for this is that we don't use a database and all the data is stored in the microservices themsleves. 
+The "replicas" in all the yaml files are set to 1. The reason for this is that we don't use a database and all the data is stored in the microservices themsleves. 
