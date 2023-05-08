@@ -33,8 +33,8 @@ Our webiste will suggest a variety of services to its users, who will be the peo
 The user will be able to 
 1. Get information about a specific book 
 2. See the rating of a specific book 
-3. See the list of books and the ratings for each of them provided by a specific user 
-5. See the books that a user read along with the information about those books and the ratings that the user provided for each of them
+3. See the books that a user read along with the information about those books and the ratings that the user provided for each of them
+4. See the list of books and the ratings for each of them provided by a specific user (This functionality is present in the microservice however not in the UI code, hence the user cannot see it when running the application now. Can be added later)
 
 ## Running the app in Kubernetes 
 To run the app in Kubernetes, you should have Docker for Desktop installed.  
