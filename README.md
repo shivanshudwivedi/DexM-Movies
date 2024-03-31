@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 # DexM
 CPSC-415-02 Project
-=======
+
 # Libre
 
 ## Application nature and purpose
@@ -92,4 +92,3 @@ kubectl get nodes -o wide
 
 ## Notes
 The "replicas" in all the yaml files are set to 1. The reason for this is that we don't use a database and all the data is stored in the microservices themsleves. 
->>>>>>> a5c4df9f7982594893756667dcfdf1b54a46a8e7
