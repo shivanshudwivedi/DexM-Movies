@@ -1,0 +1,95 @@
+body{
+  background-color: #A7D2CB;
+}
+
+.name {
+  color: white;
+  font-family: "Comic Sans MS";
+  font-style: bold;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 80px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #d9ad7c;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  font-family: "Comic Sans MS";
+  border-radius: 15px 15px 15px 15px;
+
+}
+
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+  border-radius: 10px 0 0 10px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #fff2df;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #a2836e;
+  color: white;
+}
+
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type=text] {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  font-family: "Comic Sans MS";
+}
+
+input[type=submit] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #F2D388;
+  color: black;
+  font-family: "Comic Sans MS";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #C98474;
+}
+
+label[type=name_search] {
+  font-family: "Comic Sans MS";
+  font-size: 18px;
+  padding: 10px;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/rating_res_style.css') }}">
+</head>
+<body>
+	<h1 class="name">Book's Rating</h1>
+	<div class="card">
+	  <div class="container">
+	    <h3><b>Information card</b></h3>
+		<p>The book ID: {{result_rating['bookId']}}</p>
+		<p>The name: {{ result_rating['name']}}</p>
+		<p>The rating: {{ result_rating['rating']}}</p>
+	  </div>
+	</div>
+</body>
+</html>

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+.DS_Store
+target/
+
+>>>>>>> a5c4df9f7982594893756667dcfdf1b54a46a8e7
 # Compiled class file
 *.class
 
@@ -21,4 +27,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 replay_pid*
+=======
+>>>>>>> a5c4df9f7982594893756667dcfdf1b54a46a8e7

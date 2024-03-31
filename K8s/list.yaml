@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: list-deployment
+  labels:
+    app.kubernetes.io/name: list
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: list
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: list
+    spec:
+      containers:
+      - name: list
+        image: armennanayan/book-list:1.0.0
+        ports:
+        - containerPort: 8082
+          name: rest-port
+        env:
+        
+        - name: HOST1
+          valueFrom:
+            configMapKeyRef:
+              name: book-list-config
+              key: host_ratings
+
+        - name: PORT1
+          valueFrom:
+            configMapKeyRef:
+              name: book-list-config
+              key: port_ratings
+
+        - name: LV1
+          valueFrom:
+            configMapKeyRef:
+              name: book-list-config
+              key: lv_ratings
+
+        - name: HOST2
+          valueFrom:
+            configMapKeyRef:
+              name: book-list-config
+              key: host_info
+        
+        - name: PORT2
+          valueFrom:
+            configMapKeyRef:
+              name: book-list-config
+              key: port_info
+
+        - name: LV2
+          valueFrom:
+            configMapKeyRef:
+              name: book-list-config
+              key: lv_info
+                               
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: list-service
+spec:
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: list
+  ports:
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: 8082
+      targetPort: rest-port
+      nodePort: 30104  #This is what we need to poke in goodle cloud
