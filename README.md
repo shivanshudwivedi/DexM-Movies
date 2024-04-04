@@ -2,7 +2,7 @@
 # DexM
 CPSC-415-02 Project
 
-# Libre
+# RecMove
 
 ## Application nature and purpose
 
