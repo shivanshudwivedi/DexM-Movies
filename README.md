@@ -24,3 +24,5 @@ CPSC-415-02 Project
 
 ## General description of the UI with the primary actions
 
+You need to create your own .env file using the template .env.example with your own API key.
+
