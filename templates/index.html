@@ -25,6 +25,13 @@
         <input type="number" id="release_year_from" name="release_year_from" min="1900" max="2100">
         <label for="release_year_to">Release Year (To):</label>
         <input type="number" id="release_year_to" name="release_year_to" min="1900" max="2100">
+        <label for="genre_id">Select Genre:</label>
+        <select id="genre_id" name="genre_id">
+            <option value="">All Genres</option>
+            {% for genre in genres %}
+            <option value="{{ genre['id'] }}">{{ genre['name'] }}</option>
+            {% endfor %}
+        </select>
     </div>
     
     <button type="submit">Search</button>
