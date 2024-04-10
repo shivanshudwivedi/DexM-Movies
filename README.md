@@ -26,7 +26,7 @@ CPSC-415-02 Project
 
 In order to use this application, an .env file using the template .env.example should be created.
 
-Fill in the following variable with your own API key:
+Fill in the following variable with your own TMDB API access token (NOT API key):
 
 ```
 API_KEY=
