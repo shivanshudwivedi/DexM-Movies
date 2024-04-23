@@ -29,8 +29,12 @@ Our team is a diverse community of students of different origins, grades, and in
 3. Test Cases
    
 ## Languages and Frameworks 
-TO BE FILLED
 
+The Frontend part uses React, an open-source frontend TypeScript library. The Backend part uses Flask, a Python-based web framework. ADD ADITIONAL INFO
+
+## Testing Strategies
+
+The Frontend part does not require testing, and the test is written only for the backend part.
 
 ## WHAT IF THIS AND DO WE NEED IT? General description of the UI with the primary actions
 
