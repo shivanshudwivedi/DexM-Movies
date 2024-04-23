@@ -14,7 +14,7 @@ Our team is a diverse community of students of different origins, grades, and in
 
 **Armen Nanayan'25 _junior_** – our main decision-maker. Throughout the project is working on the frontend and on connecting it to the backend. NEED MORE INFO
 
-**Chris Yi'26 _sophomore_** – our GitHub keeper, repository and test case guy. NEED MORE INFO
+**Chris Yi'26 _sophomore_** – our GitHub keeper, repository and test case guy. Takes care of repository related issues (merge conflicts, etc), writes test cases for the backend codes, and also learning about Flask as well as contributing to the README as well.
 
 **Hung Pham'25 _junior_** – our main backend person, he is implementing the actual functionality of the project. He is working with the movie database, as well as on the filters for movie search and on a random movie generator. 
 
