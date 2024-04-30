@@ -1,11 +1,7 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import { Button } from 'semantic-ui-react';
-import { useNavigate } from 'react-router-dom';
+import { Menu, Button, Form, Input } from 'semantic-ui-react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { Form } from 'semantic-ui-react';
-import { Input } from 'semantic-ui-react';
 
 export const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -26,15 +22,18 @@ export const Navbar = () => {
   };
 
   return (
-    <Menu fixed="top" size="huge">
+    <Menu fixed="top" size="huge" style={{ width: '100%' }}>
       <Menu.Item as={Link} to="/" style={{ fontSize: '1.5rem' }}>
         Home
       </Menu.Item>
       <Menu.Item as={Link} to="/rated" style={{ fontSize: '1.5rem' }}>
         Rated
       </Menu.Item>
-      <Menu.Item style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-        <Form onSubmit={handleSearch} style={{ width: '100%', maxWidth: '600px' }}>
+      <Menu.Item as={Link} to="/chatbot" style={{ fontSize: '1.5rem' }}>
+        MovieBot
+      </Menu.Item>
+      <Menu.Item style={{ flexGrow: 1, display: 'flex' }}>
+        <Form onSubmit={handleSearch} style={{ width: '100%' }}>
           <Input
             fluid
             size="big"

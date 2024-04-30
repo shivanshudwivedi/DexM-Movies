@@ -9,6 +9,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { Movie } from './pages/movie';
 import { TvShow } from './pages/tvshow';
 import { SearchResults } from './pages/search/SearchResults';
+import ChatBot from './components/chatbot'
 
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ function App() {
             <Route path="/movie/:id/" element={<Movie/>} />
             <Route path="/tvshow/:id/" element={<TvShow/>} />
             <Route path="/search" element={<SearchResults />} />
+            <Route path="/chatbot" element={<ChatBot />} />
         </Routes>
     </Router>
   </div>

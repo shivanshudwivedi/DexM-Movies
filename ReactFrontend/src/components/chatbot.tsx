@@ -20,7 +20,7 @@ const ChatBot: React.FC = () => {
         setConversation(updatedConversation);
 
         try {
-            const response = await fetch('http://localhost:5000/chat', {
+            const response = await fetch('http://localhost:5001/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,30 +50,34 @@ const ChatBot: React.FC = () => {
     }, [userInput, handleSendMessage]);
 
     return (
-        <Segment inverted style={{ backgroundColor: 'black', color: 'white', minHeight: '400px', width: '300px' }}>
-            <Comment.Group>
-                {conversation.map((c, index) => (
-                    <Comment key={index} style={{ textAlign: c.sender === 'You' ? 'right' : 'left' }}>
-                        <Comment.Content>
-                            <Comment.Author style={{ color: c.sender === 'You' ? 'blue' : 'red' }}>{c.sender}</Comment.Author>
-                            <Comment.Text>{c.text}</Comment.Text>
-                        </Comment.Content>
-                    </Comment>
-                ))}
-            </Comment.Group>
-            <Input
-                action={
-                    <Button color='blue' onClick={handleSendMessage}>
-                        Send
-                    </Button>
-                }
-                placeholder='Type a message...'
-                value={userInput}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserInput(e.target.value)}
-                fluid
-                style={{ marginTop: '10px' }}
-            />
-        </Segment>
+        <div style={{ padding: '20px 0', margin: 'auto', height: '100vh', width: '100vw', backgroundColor: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <Segment style={{ height: '90%', width: '60%', border: 'none', margin: 'auto', padding: '20px', borderRadius: 0, overflow: 'auto', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <Comment.Group>
+                    {conversation.map((c, index) => (
+                        <div key={index} style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '10px' }}>
+                            <Comment style={{ maxWidth: '100%', backgroundColor: c.sender === 'You' ? '#f0f0f5' : '#e0f7fa' }}>
+                                <Comment.Content>
+                                    <Comment.Author style={{ fontWeight: 'bold', color: c.sender === 'You' ? 'blue' : 'red' }}>{c.sender}</Comment.Author>
+                                    <Comment.Text style={{ color: 'black' }}>{c.text}</Comment.Text>
+                                </Comment.Content>
+                            </Comment>
+                        </div>
+                    ))}
+                </Comment.Group>
+                <Input
+                    action={
+                        <Button color='blue' onClick={handleSendMessage}>
+                            Send
+                        </Button>
+                    }
+                    placeholder='Type a message...'
+                    value={userInput}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserInput(e.target.value)}
+                    fluid
+                    style={{ marginTop: 'auto', fontSize: '1.2rem' }}
+                />
+            </Segment>
+        </div>
     );
 };
 
