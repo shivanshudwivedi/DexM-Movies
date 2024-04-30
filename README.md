@@ -4,7 +4,7 @@ Our project _**DexM Movies**_ is an academic project for CPSC-415-02-Spring 2024
 
 ## Application nature and purpose
 
-This application is suggesting users a library of movies and tv-shows and allowing to receive basic information about it (_i.e_ name, release date, age recommendation, genre, budget, rating, IMDb id, language and original poster). Moreover, a user has an option to search a movie having the name. Additionally, user might choose to search a list of movies or tv-shows within a certain range of years, as well as within a certain genre. One might choose to apply both filters. We also invite our users to use a random movie recommendation if they run out of ideas. If one have watched the movie already, they can rate them. The rated movies will be saved for this user. 
+This application is suggesting users a library of movies and tv-shows and allowing to receive basic information about it (_i.e_ name, release date, age recommendation, genre, budget, rating, IMDb ID, language and original poster). Moreover, a user has an option to search a movie having the name. Additionally, user might choose to search a list of movies or tv-shows within a certain range of years, as well as within a certain genre. One might choose to apply both filters. We also invite our users to use a random movie recommendation if they run out of ideas. If one have watched the movie already, they can rate them. The rated movies will be saved for this user. 
 
 ## DexM (_Deus ex Machina_)
 
