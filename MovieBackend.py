@@ -69,6 +69,19 @@ def fetch_movie_details(movie_Id):
     headers = {'Authorization': f'Bearer {API_KEY}'}
     response = requests.get(url, headers=headers)
     return jsonify(response.json())
+
+@app.route('/api/tv/<int:tvShowId>',  methods=['GET'])
+def fetch_tv_showDetails(tvShowId):
+    url = 'https://api.themoviedb.org/3/tv/${tvShowId}?&language=en-US'
+    headers = {'Authorization': f'Bearer {API_KEY}'}
+    try:
+        response = requests.get(url, headers=headers)
+        return jsonify(response.json())
+    except Exception as e:
+        print('Failed to fetch TV show details: ',e)
+        return jsonify({'error': 'Failed to fetch TV show details'})
+        
+
     
 if __name__ == '__main__':
     app.run()
