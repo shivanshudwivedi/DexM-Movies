@@ -62,6 +62,13 @@ def fetch_tv_shows():
     headers = {'Authorization': f'Bearer {API_KEY}'}
     response = requests.get(url, headers=headers)
     return jsonify(response.json())
+
+@app.route('/api/movies/<int:movie_Id>', methods=['GET'])
+def fetch_movie_details(movie_Id):
+    url = 'https://api.themoviedb.org/3/movie/${movie_Id}?&language=en-US'
+    headers = {'Authorization': f'Bearer {API_KEY}'}
+    response = requests.get(url, headers=headers)
+    return jsonify(response.json())
     
 if __name__ == '__main__':
     app.run()
