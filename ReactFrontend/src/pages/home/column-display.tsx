@@ -110,7 +110,7 @@ export const ColumnDisplay = (props: Props) => {
                       setRating(Number(e.target.value))
                     }
                     action={{
-                      color: "violet",
+                      color: 'black',
                       labelPosition: "right",
                       icon: "star",
                       content: "Rate",

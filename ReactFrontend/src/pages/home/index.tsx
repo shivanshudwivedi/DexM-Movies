@@ -32,12 +32,12 @@ export const Home = () => {
             {" "}
             <Button.Group>
                 <Button 
-                color={displayType == DisplayType.Movies ? "blue" : "red"} 
+                color={displayType == DisplayType.Movies ? "blue" : "black"} 
                 onClick={() => setDisplayType(DisplayType.Movies)}>
                     Movies
                 </Button>
                 <Button 
-                color={displayType == DisplayType.TvShows ? "blue" : "red"} 
+                color={displayType == DisplayType.TvShows ? "blue" : "black"} 
                 onClick={() => setDisplayType(DisplayType.TvShows)}>
                     TVShows
                 </Button>

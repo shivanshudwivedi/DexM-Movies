@@ -27,10 +27,13 @@ export const Navbar = () => {
         Home
       </Menu.Item>
       <Menu.Item as={Link} to="/rated" style={{ fontSize: '1.5rem' }}>
-        Rated
+        My List
+      </Menu.Item>
+      <Menu.Item as={Link} to="/rated" style={{ fontSize: '1.5rem' }}>
+        Perfect List
       </Menu.Item>
       <Menu.Item as={Link} to="/chatbot" style={{ fontSize: '1.5rem' }}>
-        MovieBot
+        DexMBot
       </Menu.Item>
       <Menu.Item style={{ flexGrow: 1, display: 'flex' }}>
         <Form onSubmit={handleSearch} style={{ width: '100%' }}>
@@ -43,7 +46,7 @@ export const Navbar = () => {
             action={{
               type: 'submit',
               icon: 'search',
-              color: 'violet',
+              color: 'black',
               size: 'big',
             }}
             style={{ fontSize: '1.2rem' }}
