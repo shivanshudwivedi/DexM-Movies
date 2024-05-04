@@ -7,8 +7,8 @@ app = Flask(__name__)
 CORS(app)
 Swagger(app)
 
-API_URL = "https://api-inference.huggingface.co/models/google/gemma-2b"
-headers = {"Authorization": "Bearer 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"}
+API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct"
+headers = {"Authorization": "Bearer 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"}
 
 def query_model(prompt):
     """Query the Hugging Face model API."""
@@ -65,6 +65,8 @@ def chat():
 
     if not user_message:
         return jsonify({'reply': 'No input provided'}), 400
+    
+    user_message = f"You're an AI chatbot that recommends movies. Within 550 characters, give a list of movies without describing them based on this input: {user_message}."
 
     model_response = query_model(user_message)
     print("DEBUG: Model response:", model_response) # Further debugging
@@ -78,7 +80,7 @@ def chat():
         return jsonify({'error': model_response['error'], 'details': model_response.get('details')}), 500
 
     # Fetching 'generated_text' from the dictionary
-    reply = model_response.get('generated_text', 'No reply generated') if isinstance(model_response, dict) else "Unexpected response format"
+    reply = model_response['generated_text'][len(user_message)+1:] if isinstance(model_response, dict) else "Unexpected response format"
 
     return jsonify({'reply': reply})
 
