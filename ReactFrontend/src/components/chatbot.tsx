@@ -20,7 +20,7 @@ const ChatBot: React.FC = () => {
         setConversation(updatedConversation);
 
         try {
-            const response = await fetch('http://localhost:5001/chat', {
+            const response = await fetch('http://localhost:5002/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
