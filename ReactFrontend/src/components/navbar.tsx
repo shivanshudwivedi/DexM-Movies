@@ -29,8 +29,8 @@ export const Navbar = () => {
       <Menu.Item as={Link} to="/rated" style={{ fontSize: '1.5rem' }}>
         My List
       </Menu.Item>
-      <Menu.Item as={Link} to="/rated" style={{ fontSize: '1.5rem' }}>
-        Perfect List
+      <Menu.Item as={Link} to="/perfect" style={{ fontSize: '1.5rem' }}>
+        Suggestions
       </Menu.Item>
       <Menu.Item as={Link} to="/chatbot" style={{ fontSize: '1.5rem' }}>
         DexMBot

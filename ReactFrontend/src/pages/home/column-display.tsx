@@ -113,7 +113,7 @@ export const ColumnDisplay = (props: Props) => {
                       color: 'black',
                       labelPosition: "right",
                       icon: "star",
-                      content: "Rate",
+                      content: "Add",
                       onClick: () => {
                         rate(displayData.id);
                       },

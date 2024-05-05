@@ -9,6 +9,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { Movie } from './pages/movie';
 import { TvShow } from './pages/tvshow';
 import { SearchResults } from './pages/search/SearchResults';
+import { ProfKousenList } from './pages/perfect/ProfKousentList'
 import ChatBot from './components/chatbot'
 
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/tvshow/:id/" element={<TvShow/>} />
             <Route path="/search" element={<SearchResults />} />
             <Route path="/chatbot" element={<ChatBot />} />
+            <Route path="/perfect" element={<ProfKousenList />} />
         </Routes>
     </Router>
   </div>
