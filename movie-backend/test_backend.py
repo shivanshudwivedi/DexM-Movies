@@ -62,7 +62,7 @@ class FlaskTestCase(unittest.TestCase):
         
     def test_rate_tv_show_success(self):
         """Test rate_tv_show()"""
-        response = self.app.post('/movie/1396/rate', json={
+        response = self.app.post('/tv/1396/rate', json={
             "value" : 10
         })
         self.assertEqual(response.status_code, 200)
@@ -70,7 +70,7 @@ class FlaskTestCase(unittest.TestCase):
         
     def test_rate_tv_show_fail(self):
         """Test rate_tv_show()"""
-        response = self.app.post('/movie/1396/rate', json={
+        response = self.app.post('/tv/1396/rate', json={
             "foo" : "bar"
         })
         self.assertEqual(response.status_code, 400)
