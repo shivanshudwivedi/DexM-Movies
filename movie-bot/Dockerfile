@@ -8,6 +8,8 @@ RUN pip install --no-cache-dir flask
 
 RUN pip install requests
 
+RUN pip install flasgger
+
 COPY . .
 
 EXPOSE 5002
