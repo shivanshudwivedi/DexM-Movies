@@ -47,7 +47,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_rate_movie_success(self):
         """Test rate_movie()"""
         response = self.app.post('/movie/12/rate', json={
-            "value" : 5
+            "value" : 10
         })
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.json['success'])
@@ -63,7 +63,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_rate_tv_show_success(self):
         """Test rate_tv_show()"""
         response = self.app.post('/movie/1396/rate', json={
-            "value" : 5
+            "value" : 10
         })
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.json['success'])
@@ -75,6 +75,18 @@ class FlaskTestCase(unittest.TestCase):
         })
         self.assertEqual(response.status_code, 400)
         self.assertIn("error", response.json)
+        
+    def test_get_rated_movies(self):
+        """Test get_rated_movies()"""
+        response = self.app.get('/rated/movies')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('total_results', response.json)
+    
+    def test_get_rated_tv_shows(self):
+        """Test get_rated_tv_shwos()"""
+        response = self.app.get('/rated/tv')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('total_results', response.json)
 
 if __name__ == '__main__':
     unittest.main()
