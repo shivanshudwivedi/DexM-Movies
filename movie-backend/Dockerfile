@@ -8,6 +8,8 @@ RUN pip install --no-cache-dir flask
 
 RUN pip install requests
 
+RUN pip install -r requirements.txt
+
 COPY . .
 
 EXPOSE 5001
