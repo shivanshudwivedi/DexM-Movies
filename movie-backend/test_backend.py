@@ -1,5 +1,5 @@
 import unittest
-from app import app  # Import your Flask app
+from MovieBackend import app  # Import your Flask app
 
 class FlaskTestCase(unittest.TestCase):
     def setUp(self):
@@ -7,16 +7,36 @@ class FlaskTestCase(unittest.TestCase):
         self.app = app.test_client()
         self.app.testing = True
 
-    def test_home_status_code(self):
-        """Test the home route."""
-        response = self.app.get('/')
+    def test_get_popular_movies(self):
+        """Test get_popular_movies()"""
+        response = self.app.get('/movie/popular')
         self.assertEqual(response.status_code, 200)
+        self.assertIn('total_results', response.json)
 
-    def test_authentication_guest_session(self):
-        """Test the guest session creation."""
-        response = self.app.get('/authentication/guest_session/new')
+    def test_get_popular_tv_show(self):
+        """Test get_popular_tv_show()"""
+        response = self.app.get('/tv/popular')
         self.assertEqual(response.status_code, 200)
-        self.assertIn('guest_session_id', response.json)
+        self.assertIn('total_results', response.json)
+        
+    def test_get_movie_details(self):
+        """Test get_movie_details()"""
+        response = self.app.get('/movie/12')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('overview', response.json)
+        
+    def test_get_tv_details(self):
+        """Test get_tv_details()"""
+        response = self.app.get('/tv/12')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('overview', response.json)
+        
+    def test_search_movies(self):
+        """Test search_movies()"""
+        response = self.app.get('/search/movie?query=finding nemo')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('total_results', response.json)
+        
 
 if __name__ == '__main__':
     unittest.main()
