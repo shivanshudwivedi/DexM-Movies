@@ -22,9 +22,9 @@ class FlaskTestCase(unittest.TestCase):
         
     def test_get_movie_details(self):
         """Test get_movie_details()"""
-        response = self.app.get('/movie/12')
+        response = self.app.get('/movie/559969')
         self.assertEqual(response.status_code, 200)
-        self.assertIn('Finding Nemo', response.json['title'])
+        self.assertIn('El Camino: A Breaking Bad Movie', response.json['title'])
         
     def test_get_tv_details(self):
         """Test get_tv_details()"""
@@ -34,7 +34,7 @@ class FlaskTestCase(unittest.TestCase):
         
     def test_search_movies(self):
         """Test search_movies()"""
-        response = self.app.get('/search/movie?query=finding nemo')
+        response = self.app.get('/search/movie?query=el camino')
         self.assertEqual(response.status_code, 200)
         self.assertIn('total_results', response.json)
         
@@ -46,7 +46,7 @@ class FlaskTestCase(unittest.TestCase):
         
     def test_rate_movie_success(self):
         """Test rate_movie()"""
-        response = self.app.post('/movie/12/rate', json={
+        response = self.app.post('/movie/559969/rate', json={
             "value" : 10
         })
         self.assertEqual(response.status_code, 200)
@@ -54,7 +54,7 @@ class FlaskTestCase(unittest.TestCase):
         
     def test_rate_movie_fail(self):
         """Test rate_movie()"""
-        response = self.app.post('/movie/12/rate', json={
+        response = self.app.post('/movie/559969/rate', json={
             "foo" : "bar"
         })
         self.assertEqual(response.status_code, 400)
