@@ -1,4 +1,5 @@
 import unittest
+import json
 from MovieBackend import app  # Import your Flask app
 
 class FlaskTestCase(unittest.TestCase):
@@ -23,13 +24,13 @@ class FlaskTestCase(unittest.TestCase):
         """Test get_movie_details()"""
         response = self.app.get('/movie/12')
         self.assertEqual(response.status_code, 200)
-        self.assertIn('overview', response.json)
+        self.assertIn('Finding Nemo', response.json['title'])
         
     def test_get_tv_details(self):
         """Test get_tv_details()"""
-        response = self.app.get('/tv/12')
+        response = self.app.get('/tv/1396')
         self.assertEqual(response.status_code, 200)
-        self.assertIn('overview', response.json)
+        self.assertIn('Breaking Bad', response.json['name'])
         
     def test_search_movies(self):
         """Test search_movies()"""
@@ -37,6 +38,43 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn('total_results', response.json)
         
+    def test_search_tv_shows(self):
+        """Test search_tv_shows()"""
+        response = self.app.get('/search/tv?query=breaking bad')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('total_results', response.json)
+        
+    def test_rate_movie_success(self):
+        """Test rate_movie()"""
+        response = self.app.post('/movie/12/rate', json={
+            "value" : 5
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.json['success'])
+        
+    def test_rate_movie_fail(self):
+        """Test rate_movie()"""
+        response = self.app.post('/movie/12/rate', json={
+            "foo" : "bar"
+        })
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("error", response.json)
+        
+    def test_rate_tv_show_success(self):
+        """Test rate_tv_show()"""
+        response = self.app.post('/movie/1396/rate', json={
+            "value" : 5
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.json['success'])
+        
+    def test_rate_tv_show_fail(self):
+        """Test rate_tv_show()"""
+        response = self.app.post('/movie/1396/rate', json={
+            "foo" : "bar"
+        })
+        self.assertEqual(response.status_code, 400)
+        self.assertIn("error", response.json)
 
 if __name__ == '__main__':
     unittest.main()
