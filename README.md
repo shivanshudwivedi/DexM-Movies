@@ -23,6 +23,14 @@ Our team consists of a diverse group of students from various backgrounds and ac
 - **Ryan Le '24 (Senior)** – Further information needed regarding specific roles and contributions.
 - **Shivanshu Dwivedi '26 (Sophomore)** – Lead frontend developer, responsible for developing the webpage based on IMDB's design and integrating it with backend functionalities.
 
+## Languages
+
+1. Python
+2. HTML
+3. CSS
+4. React
+5. Docker
+
 ## Modules
 
 1. **Frontend**: Developed using React, handles user interaction and data presentation.
