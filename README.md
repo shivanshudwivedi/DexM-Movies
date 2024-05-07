@@ -36,7 +36,7 @@ Our team consists of a diverse group of students from various backgrounds and ac
 - **Database**: PostgreSQL for data storage and management.
 - **Search Functionality**: Elasticsearch for advanced search capabilities.
 
-## How to run 
+## How to run (Locally)
 
 ```bash
 cd movie-bot
@@ -51,6 +51,24 @@ python MovieBackend.py
 ```bash
 cd ReactFrontend
 npm run dev
+```
+## How to run (using Docker locally)
+```bash
+cd movie-bot
+docker build -t movie-bot .
+docker run -p 5002:5002 movie-bot
+```
+
+```bash
+cd movie-backend
+docker build -t movie-backend .
+docker run -p 5001:5001 movie-backend
+```
+
+```bash
+cd ReactFrontend
+docker build -t website .
+docker run -p 5173:5173 website
 ```
 
 ## Testing Strategies
