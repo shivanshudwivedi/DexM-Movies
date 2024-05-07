@@ -26,10 +26,11 @@ Our team consists of a diverse group of students from various backgrounds and ac
 ## Languages
 
 1. Python
-2. HTML
+2. JavaScript
 3. CSS
-4. React
-5. Docker
+4. HTML
+5. React
+6. Docker
 
 ## Modules
 
