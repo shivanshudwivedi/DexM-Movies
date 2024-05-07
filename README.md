@@ -32,6 +32,14 @@ Our team consists of a diverse group of students from various backgrounds and ac
 5. React
 6. Docker
 
+## Frameworks
+
+1. React
+2. Vite
+3. Next UI
+4. Semantic UI
+5. Flask
+
 ## Modules
 
 1. **Frontend**: Developed using React, handles user interaction and data presentation.
