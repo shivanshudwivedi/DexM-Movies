@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from flasgger import Swagger
+
 import requests
 
 app = Flask(__name__)
 CORS(app)
-Swagger(app)
+
 
 API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct"
 headers = {"Authorization": "Bearer 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"}
