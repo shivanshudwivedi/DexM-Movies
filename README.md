@@ -39,16 +39,19 @@ Our team consists of a diverse group of students from various backgrounds and ac
 
 ```bash
 cd movie-bot
+pip install -r requirements.txt
 python MovieBot.py
 ```
 
 ```bash
 cd movie-backend
+pip install -r requirements.txt
 python MovieBackend.py
 ```
 
 ```bash
 cd ReactFrontend
+npm install
 npm run dev
 ```
 ## How to run (using Docker locally)
