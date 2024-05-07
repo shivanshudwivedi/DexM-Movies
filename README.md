@@ -36,6 +36,23 @@ Our team consists of a diverse group of students from various backgrounds and ac
 - **Database**: PostgreSQL for data storage and management.
 - **Search Functionality**: Elasticsearch for advanced search capabilities.
 
+## How to run 
+
+```bash
+cd movie-bot
+python MovieBot.py
+```
+
+```bash
+cd movie-backend
+python MovieBackend.py
+```
+
+```bash
+cd ReactFrontend
+npm run dev
+```
+
 ## Testing Strategies
 
 - **Backend Testing**: Comprehensive tests written for all backend functionalities to ensure reliability and stability.
@@ -44,6 +61,12 @@ Our team consists of a diverse group of students from various backgrounds and ac
 ## Environment Setup
 
 To set up the application, create an `.env` file based on the `.env.example` template and fill in the `API_KEY` variable with your TMDB API access token.
+
+## Future Goals
+- Refactor code to keep consumer security & API Key security in mind.
+- Improve the authentication feature & add O-Auth feature.
+- Implement a Neural Network based movie recommender that suggests movies on the basis of user's previous searches.
+- Deploy the application to be of public use.
 
 ## License
 
