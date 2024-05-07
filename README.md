@@ -33,7 +33,6 @@ Our team consists of a diverse group of students from various backgrounds and ac
 
 - **Frontend**: Utilizes React, a JavaScript library for building user interfaces.
 - **Backend**: Employs Flask, a lightweight WSGI web application framework in Python.
-- **Database**: PostgreSQL for data storage and management.
 - **Search Functionality**: Elasticsearch for advanced search capabilities.
 
 ## How to run (Locally)
@@ -75,6 +74,14 @@ docker run -p 5173:5173 website
 
 - **Backend Testing**: Comprehensive tests written for all backend functionalities to ensure reliability and stability.
 - **Frontend Testing**: While the frontend primarily requires visual and interactive checks, basic functionality tests are also implemented to ensure UI components behave as expected.
+
+
+## CI/CD Pipeline
+
+We have implemented a CI/CD pipeline using GitHub Actions, which automates our testing and deployment processes. This pipeline includes:
+
+- **Automated Tests**: Runs automated unit tests to ensure all code commits meet quality standards before merging.
+- **Build**: Builds the Docker containers for both frontend and backend services.
 
 ## Environment Setup
 
