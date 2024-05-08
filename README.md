@@ -8,13 +8,13 @@ Our project _**DexM Movies**_ is an academic project for CPSC-415-02-Spring 2024
 DexM Movies provides users with a comprehensive library of movies and TV shows, offering detailed information such as name, release date, age recommendation, genre, budget, rating, IMDb ID, language, and original posters. The application allows users to:
 
 - Search for movies or TV shows by name.
-- Filter movies or TV shows by release year or genre.
-- Receive random movie recommendations.
-- Rate movies, with these ratings being saved per user for future reference.
+- Receive Ken Kousen's special movie recommendations.
+- Add movies to your personal library.
+- DexM bot that recommends movies of your preference.
 
 ## Team DexM (_Deus ex Machina_)
 
-Our team consists of a diverse group of students from various backgrounds and academic years, all united by a passion for computer science:
+Our team consists of a diverse group of students from various backgrounds and academic years, all united by a passion for computer science and love for movies:
 
 - **Kamilla Volkova '26 (Sophomore)** – Notekeeper and communications lead. Responsible for managing communications, taking notes, maintaining the email list, and updating the README file.
 - **Armen Nanayan '25 (Junior)** – Decision-maker and frontend developer, tasked with integrating the frontend with the backend. Additional responsibilities and achievements are forthcoming.
@@ -29,8 +29,6 @@ Our team consists of a diverse group of students from various backgrounds and ac
 2. JavaScript
 3. CSS
 4. HTML
-5. React
-6. Docker
 
 ## Frameworks
 
@@ -39,6 +37,7 @@ Our team consists of a diverse group of students from various backgrounds and ac
 3. Next UI
 4. Semantic UI
 5. Flask
+6. Docker
 
 ## Modules
 
