@@ -21,6 +21,12 @@ def tmdb_request(endpoint, method="GET", **kwargs):
         response = requests.post(url, headers=headers, json=kwargs)
     return response.json()
 
+@app.route('/authentication/guest_session/new', methods=['GET'])
+def create_guest_session():
+    """Endpoint to create a new guest session via TMDB API."""
+    response = tmdb_request("authentication/guest_session/new")
+    return jsonify(response)
+
 @app.route('/movie/popular', methods=['GET'])
 def get_popular_movies():
     response = tmdb_request("movie/popular")
