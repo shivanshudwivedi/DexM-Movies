@@ -2,8 +2,7 @@
 # DexM Movies
 
 Our project _**DexM Movies**_ is an academic project for CPSC-415-02-Spring 2024 Special Topics: Large Scale and Open-Source Project Development at Trinity College, CT.
-![image_2024-05-08_13-16-50](https://github.com/mhsr21/DexM-Movies/assets/144258787/dcc626e6-1fde-476d-ae08-4520bb37853f)
-
+![image_2024-05-08_13-16-50](https://github.com/mhsr21/DexM-Movies/assets/144258787/e336c0d5-e04a-4f56-b99e-db374a56a07c)
 ## Application Nature and Purpose
 
 DexM Movies provides users with a comprehensive library of movies and TV shows, offering detailed information such as name, release date, age recommendation, genre, budget, rating, IMDb ID, language, and original posters. The application allows users to:
