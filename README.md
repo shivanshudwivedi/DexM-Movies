@@ -104,10 +104,6 @@ We have implemented a CI/CD pipeline using GitHub Actions, which automates our t
 - **Automated Tests**: Runs automated unit tests to ensure all code commits meet quality standards before merging.
 - **Build**: Builds the Docker containers for both frontend and backend services.
 
-## Environment Setup
-
-To set up the application, create an `.env` file based on the `.env.example` template and fill in the `API_KEY` variable with your TMDB API access token.
-
 ## Future Goals
 - Refactor code to keep consumer security & API Key security in mind.
 - Improve the authentication feature & add O-Auth feature.
