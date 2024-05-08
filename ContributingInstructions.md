@@ -17,7 +17,7 @@ To contribute, you'll need to fork the repository and clone it to your machine:
 1. **Fork** the repository by clicking the "Fork" button on the top-right corner of this page.
 2. **Clone** your forked repository to your local machine:
    \`\`\`bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_FORKED_REPO.git
+   git clone (https://github.com/mhsr21/DexM-Movies.git)
    \`\`\`
 3. Set up the upstream remote to the original repository so you can fetch updates:
    \`\`\`bash
