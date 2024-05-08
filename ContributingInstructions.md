@@ -16,22 +16,22 @@ Before contributing, ensure you have:
 To contribute, you'll need to fork the repository and clone it to your machine:
 1. **Fork** the repository by clicking the "Fork" button on the top-right corner of this page.
 2. **Clone** your forked repository to your local machine:
-   \`\`\`bash
+   ```bash
    git clone (https://github.com/mhsr21/DexM-Movies.git)
-   \`\`\`
+   ```
 3. Set up the upstream remote to the original repository so you can fetch updates:
-   \`\`\`bash
+   ```bash
    git remote add upstream https://github.com/mhsr21/DexM-Movies.git
-   \`\`\`
+   ```
 
 ## Making Changes
 
 ### Create a Branch
 
 Always create a new branch for your changes:
-\`\`\`bash
+```bash
 git checkout -b your-branch-name
-\`\`\`
+```
 
 ### Make Your Changes
 
@@ -42,25 +42,25 @@ Implement your changes or improvements. Be sure to:
 ### Commit Your Changes
 
 Make commits that are small and logically separated:
-\`\`\`bash
+```bash
 git add .
 git commit -m "A brief description of the changes"
-\`\`\`
+```
 
 ### Keep Your Branch Updated
 
 Regularly pull changes from the upstream repository to keep your branch up-to-date:
-\`\`\`bash
+```bash
 git fetch upstream
 git rebase upstream/main
-\`\`\`
+```
 
 ### Push Changes to GitHub
 
 Once you're ready to get feedback or merge, push your branch:
-\`\`\`bash
+```bash
 git push origin main
-\`\`\`
+```
 
 ## Submitting a Pull Request (PR)
 
