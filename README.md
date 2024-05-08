@@ -20,7 +20,7 @@ Our team consists of a diverse group of students from various backgrounds and ac
 - **Armen Nanayan '25 (Junior)** – Decision-maker and frontend developer, tasked with integrating the frontend with the backend. Additional responsibilities and achievements are forthcoming.
 - **Chris Yi '26 (Sophomore)** – Repository manager and test case developer. Handles merge conflicts, repository issues, and backend test cases.
 - **Hung Pham '25 (Junior)** – Backend developer focusing on database interactions, search filters, and the random movie generator feature.
-- **Ryan Le '24 (Senior)** – Further information needed regarding specific roles and contributions.
+- **Ryan Le '24 (Senior)** – Backend developer focusing on search function, also responsible for code readability on the backend.
 - **Shivanshu Dwivedi '26 (Sophomore)** – Lead frontend developer, responsible for developing the webpage based on IMDB's design and integrating it with backend functionalities.
 
 ## Languages
