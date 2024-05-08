@@ -68,6 +68,7 @@ python MovieBackend.py
 
 ```bash
 cd ReactFrontend
+touch .env #Type the VITE_API_KEY here
 npm install
 npm run dev
 ```
