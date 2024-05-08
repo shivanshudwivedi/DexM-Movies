@@ -17,7 +17,7 @@ DexM Movies provides users with a comprehensive library of movies and TV shows, 
 Our team consists of a diverse group of students from various backgrounds and academic years, all united by a passion for computer science and love for movies:
 
 - **Kamilla Volkova '26 (Sophomore)** – Notekeeper and communications lead. Responsible for managing communications, taking notes, maintaining the email list, and updating the README file.
-- **Armen Nanayan '25 (Junior)** – Decision-maker and frontend developer, tasked with integrating the frontend with the backend. Additional responsibilities and achievements are forthcoming.
+- **Armen Nanayan '25 (Junior)** – Decision-maker and frontend developer, tasked with integrating the frontend with the backend. Also helped managing the whole github repository by managing team meetings and pushes.
 - **Chris Yi '26 (Sophomore)** – Repository manager and test case developer. Handles merge conflicts, repository issues, and backend test cases.
 - **Hung Pham '25 (Junior)** – Backend developer focusing on database interactions, search filters, and the random movie generator feature.
 - **Ryan Le '24 (Senior)** – Backend developer focusing on search function, also responsible for code readability on the backend.
